@@ -34,4 +34,8 @@ export class HeaderComponent implements OnInit {
   selected (hero: string) {
     this.findHeroService.selectedHero = hero;
   };
+
+  clearControl() {
+    this.control.reset();
+  }
 }

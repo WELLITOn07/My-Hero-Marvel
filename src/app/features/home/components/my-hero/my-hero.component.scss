@@ -19,31 +19,24 @@
 .main {
   width: 100%;
   height: 100%;
-  margin-top: 190px;
   background-image: url(images/4799158.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.main > img {
-  cursor: pointer;
-  padding: 20px;
-  position: fixed;
-}
-
-.main > img:hover {
-  width: 70px;
-  transform: rotate(10deg);
-}
-
 .heroDetails {
+  position: relative;
+  margin: auto;
   padding-top: 50px;
   text-align: center;
   color: #9FB8BF;
 }
-
-@media (max-width: 500px) {
-  .main {
-    margin-top: 245px;
-  }
+.heroDetails p > img {
+  margin-top: -40px;
 }
+.heroDetails p > img:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: rotate(10deg);
+}
+
 
