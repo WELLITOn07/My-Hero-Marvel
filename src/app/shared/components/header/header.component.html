@@ -1,11 +1,12 @@
 <header class="header">
   <h1>My Hero Marvel</h1>
-  <p>Search for information on your favorite Marvel hero</p>
+  <p>Procure informações sobre seu herói favorito da Marvel</p>
 
     <mat-form-field class="formField">
       <mat-label class="label">
-        Find your hero
+       <img src="https://img.icons8.com/windows/64/000000/searchengin.png"/>
       </mat-label>
+      <br>
       <input matInput type="text" [matAutocomplete]="auto" [formControl]="control" class="input">
       <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption="">
         <mat-option *ngFor="let heroe of filHeroes | async " [value]="heroe" class="option">
@@ -13,4 +14,6 @@
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
+    <br>
+    <p><label for="input"  class="find">ENCONTRAR</label></p>
 </header>
