@@ -4,9 +4,8 @@
 
     <mat-form-field class="formField">
       <mat-label class="label">
-       <img src="https://img.icons8.com/windows/64/000000/searchengin.png"/>
+        encontrar herói
       </mat-label>
-      <br>
       <input matInput type="text" [matAutocomplete]="auto" [formControl]="control" class="input">
       <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption="">
         <mat-option *ngFor="let heroe of filHeroes | async " [value]="heroe" class="option">
@@ -14,6 +13,4 @@
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
-    <br>
-    <p><label for="input"  class="find">ENCONTRAR</label></p>
 </header>

@@ -53,9 +53,9 @@
   justify-content: center;
 }
 .label {
-  font-size: 2em;
+  font-size: 1.5em;
   padding-top: 50px;
-  color: #4B6B78;
+  color: #cdcdcd;
 }
 .input {
   margin: 10px;
@@ -65,12 +65,6 @@
 .option:hover {
   background-color: #9FB8BF;
 }
-.find {
-  text-align: center;
-  justify-items: center;
-  color: #cdcdcd;
-}
-
 @media (max-width: 500px) {
   .header > h1 {
     font-size: 3em;
