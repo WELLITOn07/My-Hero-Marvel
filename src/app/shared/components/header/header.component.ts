@@ -30,4 +30,8 @@ export class HeaderComponent implements OnInit {
 
     return this.marvel.filter(heroe => heroe.toLocaleLowerCase().indexOf(formatVal) === 0);
   };
+
+  selected (hero: string) {
+    this.findHeroService.selectedHero = hero;
+  };
 }

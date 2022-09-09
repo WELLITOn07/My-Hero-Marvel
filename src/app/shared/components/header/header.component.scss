@@ -51,6 +51,8 @@
 .formField {
   display: flex;
   justify-content: center;
+  background-color: #374047fa;
+  margin-top: -15px;
 }
 .label {
   font-size: 1.5em;
@@ -60,8 +62,9 @@
 }
 .input {
   margin: 10px;
-  color: #EDF6F5;
+  color: #D92639;
   font-size: larger;
+  font-weight: 500;
 }
 .option:hover {
   background-color: #9FB8BF;

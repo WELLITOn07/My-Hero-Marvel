@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class FindHeroService {
 
-  marvel: Array<string> = ['Welliton', 'Caio']
+  marvel: Array<string> = ['Welliton', 'Caio'];
+  selectedHero: string = '';
 
   constructor() {}
 }
