@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+//--IMPORTS--//
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+  font-family: 'CAKometo';
+  src: url(fonts/CAKometo-Regular.otf) format('opentype');
+}
+
+//--ROOT--//
+:root {
+  //Palette (Apenas p/ salvar)
+  --color-01: #020202;
+  --color-02: #181D22;
+  --color-03: #374047;
+  --color-04: #4B6B78;
+  --color-05: #6B0C1C;
+  --color-07: #EDF6F5;
+  --color-08: #9FB8BF;
+  --color-09: #D92639;
+}
+
+//--HEADER--//
+.header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+.header > h1 {
+  text-align: center;
+  font-family: 'CAKometo', sans-serif;
+  background-color: #D92639;
+  color: #181D22;
+  font-weight: bolder;
+  font-size: 5em;
+  padding: 25px;
+  text-shadow: 0px 0px 2px #181d226e;
+}
+.header > p {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+  font-weight: 700;
+  background-color: #181D22;
+  color: #EDF6F5;
+  margin-top: -21px;
+  padding: 10px;
+}
+
+//--formField--//
+.formField {
+  display: flex;
+  justify-content: center;
+}
+.label {
+  font-size: 2em;
+  padding-top: 50px;
+  color: #4B6B78;
+}
+.input {
+  margin: 10px;
+  color: #EDF6F5;
+  font-size: larger;
+}
+.option:hover {
+  background-color: #9FB8BF;
+}
+
+@media (max-width: 500px) {
+  .header > h1 {
+    font-size: 3em;
+  }
+}

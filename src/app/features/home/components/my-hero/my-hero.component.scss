@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+//--IMPORTS--//
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+//--ROOT--//
+:root {
+  //Palette (Apenas p/ salvar)
+  --color-01: #020202;
+  --color-02: #181D22;
+  --color-03: #374047;
+  --color-04: #4B6B78;
+  --color-05: #6B0C1C;
+  --color-07: #EDF6F5;
+  --color-08: #9FB8BF;
+  --color-09: #D92639;
+}
+
+//--MAIN--//
+.main {
+  width: 100%;
+  height: 100%;
+  background: url(images/4799158.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+
+}
