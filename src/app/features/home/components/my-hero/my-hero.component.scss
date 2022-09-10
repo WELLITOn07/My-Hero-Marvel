@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 //--IMPORTS--//
+@font-face {
+  font-family: 'Marvel';
+  src: url(fonts/Marvel.ttf);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 //--ROOT--//
@@ -15,6 +20,7 @@
   --color-08: #9FB8BF;
   --color-09: #D92639;
 }
+
 //--MAIN--//
 .main {
   width: 100%;
@@ -23,6 +29,20 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.main>h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #6B0C1C;
+  font-family: 'Marvel', sans-serif;
+  padding-left: 10px;
+}
+
+.main p {
+  color: #EDF6F5;
+  font-family: 'Poppins', sans-serif;
+}
+
 .heroDetails {
   position: relative;
   margin: auto;
@@ -30,13 +50,54 @@
   text-align: center;
   color: #9FB8BF;
 }
-.heroDetails p > img {
+
+.heroDetails p>img {
   margin-top: -40px;
 }
-.heroDetails p > img:hover {
+
+.heroDetails p>img:hover {
   cursor: pointer;
   transition: 0.3s;
   transform: rotate(10deg);
 }
 
+.heroNemAndImg {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
 
+.heroNemAndImg p>img {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  width: 300px;
+}
+
+.heroSeriesAnd {
+  display: flex;
+  flex-direction: column;
+  background-color: #181D22;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: center;
+  gap: 10px;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  color: #EDF6F5;
+}
+
+.heroSeriesAnd::-webkit-scrollbar {
+  display: none;
+}
+
+.heroSeriesAnd > h2 {
+  background-color: #374047;
+  font-size: 3em;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #4B6B78;
+  font-family: 'Marvel', sans-serif;
+  padding-left: 10px;
+}

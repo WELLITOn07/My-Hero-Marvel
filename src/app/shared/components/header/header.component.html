@@ -6,10 +6,10 @@
       <mat-label class="label">
         Pesquisar Herói
       </mat-label>
-      <input matInput type="text" [matAutocomplete]="auto" [formControl]="control" class="input">
+      <input  matInput type="text" [matAutocomplete]="auto" class="input">
       <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption="">
-        <mat-option *ngFor="let hero of filHeroes | async " [value]="hero" class="option" (click)="selected(hero)">
-          {{ hero }}
+        <mat-option *ngFor="let hero of marvel " [value]="hero.name" class="option" (click)="selected(hero)">
+          {{ hero.name }}
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
