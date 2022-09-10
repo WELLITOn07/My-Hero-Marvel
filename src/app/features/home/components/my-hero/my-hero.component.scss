@@ -28,14 +28,17 @@
   background-image: url(images/4799158.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .main>h1 {
   font-size: 3em;
   text-transform: uppercase;
   color: #6B0C1C;
+  background-color: #181D22;
   font-family: 'Marvel', sans-serif;
-  padding-left: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
 .main p {
@@ -51,11 +54,17 @@
   color: #9FB8BF;
 }
 
-.heroDetails p>img {
+.img {
+  background-color: #3B444B;
+  padding: 20px;
+  margin-top: -55px;
+}
+
+.heroDetails p > img {
   margin-top: -40px;
 }
 
-.heroDetails p>img:hover {
+.heroDetails p >img:hover {
   cursor: pointer;
   transition: 0.3s;
   transform: rotate(10deg);
@@ -64,14 +73,13 @@
 .heroNemAndImg {
   display: flex;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.heroNemAndImg p>img {
-  padding-left: 10px;
-  padding-right: 10px;
+.heroNemAndImg p > img {
+  width: 500px;
   margin: auto;
-  width: 300px;
+  margin-top: -14px;
 }
 
 .heroSeriesAnd {
@@ -80,12 +88,14 @@
   background-color: #181D22;
   overflow-y: auto;
   padding: 10px;
-  text-align: center;
   gap: 10px;
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  height: 300px;
   margin: auto;
   color: #EDF6F5;
+  text-align: justify;
+  text-indent: 10px;
+  line-height: 20px;
 }
 
 .heroSeriesAnd::-webkit-scrollbar {
@@ -94,10 +104,17 @@
 
 .heroSeriesAnd > h2 {
   background-color: #374047;
-  font-size: 3em;
+  font-size: 2.5em;
   padding: 10px;
+  text-align: center;
   text-transform: uppercase;
   color: #4B6B78;
   font-family: 'Marvel', sans-serif;
   padding-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .heroNemAndImg p > img {
+    width: 350px;
+  }
 }

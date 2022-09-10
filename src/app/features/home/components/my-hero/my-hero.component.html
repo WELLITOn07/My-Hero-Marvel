@@ -3,16 +3,17 @@
 <main class="main">
   <section class="
   heroDetails">
-  <p>
+  <p class="img">
     <img (click)="showDetails()" src="https://img.icons8.com/windows/64/000000/searchengin.png"/>
   </p>
   </section>
   <h1>{{ heroName }}</h1>
   <section *ngIf="showHero" class="heroNemAndImg">
     <p><img src="{{ heroImg}}" alt=""></p>
-    <p>{{ heroDescription }}</p>
   </section>
   <section *ngIf="showHero" class="heroSeriesAnd">
+    <h2 *ngIf="showHero">Sobre</h2>
+    <p>{{ heroDescription }}</p>
     <h2 *ngIf="showHero">SERIES</h2>
     <div *ngFor="let item of heroSeries">
       {{ item }}
