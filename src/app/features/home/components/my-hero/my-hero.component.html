@@ -9,17 +9,17 @@
   </section>
   <h1>{{ heroName }}</h1>
   <section *ngIf="showHero" class="heroNemAndImg">
-    <p><img src="{{ heroImg}}" alt=""></p>
+    <p><img src="{{ heroImg }}" alt="heroImg" textInfos></p>
   </section>
   <section *ngIf="showHero" class="heroSeriesAnd">
     <h2 *ngIf="showHero">Sobre</h2>
-    <p>{{ heroDescription }}</p>
+    <p class="textInfos">{{ heroDescription }}</p>
     <h2 *ngIf="showHero">SERIES</h2>
-    <div *ngFor="let item of heroSeries">
+    <div *ngFor="let item of heroSeries" class="textInfos">
       {{ item }}
     </div>
     <h2 *ngIf="showHero">HISTÓRIAS</h2>
-    <div *ngFor="let item of heroStories">
+    <div *ngFor="let item of heroStories" class="textInfos">
       {{ item }}
     </div>
   </section>
