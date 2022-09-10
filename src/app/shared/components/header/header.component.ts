@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable, startWith, map, debounceTime } from 'rxjs';
+import { Observable, startWith, map } from 'rxjs';
 import { FindHeroService } from '../../services/find-hero.service';
 
 @Component({
@@ -20,16 +20,22 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCharacters();
-    this.filHeroes = this.control.valueChanges.pipe (
-      startWith(''),
-      map(val => this._filter(val))
-    )
+    this.filterHero();
   }
 
+  //-- CONSUMINDO A API --//
   getCharacters() {
     this.findHeroService.getAllCharacters();
     this.marvel = this.findHeroService.marvel;
     this.heroes = this.findHeroService.heroes;
+  };
+
+  //-- MÉTODO P/ FILTAR O VALOR DO CONTROL, P/ FUNCIONAR O MATERIAL AUTOCOMPLETE --//
+  filterHero() {
+    this.filHeroes = this.control.valueChanges.pipe(
+      startWith(''),
+      map(val => this._filter(val))
+    )
   };
 
   private _filter(val: string): string[] {
@@ -38,8 +44,15 @@ export class HeaderComponent implements OnInit {
     return this.heroes.filter(name => name.toLocaleLowerCase().indexOf(formatVal) === 0)
   };
 
+  //-- PEGANDO O NOME DO HERÓI ESCOLHIDO NO OPTION DO MATERIAL --//
   selected(heroe: string) {
-    this.findHeroService.selectedHero =  '';
+    this.findHeroService.selectedHero = '';
     this.findHeroService.selectedHero = heroe;
+  };
+
+  //-- RESETANDO O CONTROL E O OBSERVABLE --//
+  clear() {
+    this.control.reset();
+    this.filterHero();
   };
 }

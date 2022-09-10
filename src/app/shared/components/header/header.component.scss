@@ -72,6 +72,16 @@
   font-size: larger;
   font-weight: 500;
 }
+#clear {
+  position: absolute;
+  margin-left: 185px;
+  margin-top: -10px;
+  width: 30px;
+}
+#clear:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
 .option:hover {
   background-color: #9FB8BF;
 }

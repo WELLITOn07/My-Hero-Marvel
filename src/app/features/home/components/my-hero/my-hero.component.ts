@@ -10,6 +10,7 @@ export class MyHeroComponent implements OnInit {
 
   constructor(private findHeroService: FindHeroService) { }
 
+  //-- VAR P/ GUARDAR ELEMENTOS DA API --//
   selectedHero: string = '';
   heroName: string = '';
   heroDescription: string = '';
@@ -21,6 +22,7 @@ export class MyHeroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //-- MÉTODO P/ ADICIONAR AS INFORMAÇÕES DO HERÓI ESCOLHIDO --/
   showDetails() {
     this.heroName = '';
     this.heroDescription = '';
