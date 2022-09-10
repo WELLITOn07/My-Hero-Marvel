@@ -10,7 +10,7 @@ export class MyHeroComponent implements OnInit {
 
   constructor(private findHeroService: FindHeroService) { }
 
-  hero: Array<any> = [];
+  selectedHero: string = '';
   heroName: string = '';
   heroDescription: string = '';
   heroImg: string = '';
@@ -29,22 +29,22 @@ export class MyHeroComponent implements OnInit {
     this.heroStories = [];
 
 
-    this.hero = this.findHeroService.selectedHero;
-    this.hero = this.findHeroService.selectedHero;
+    this.selectedHero = this.findHeroService.selectedHero;
     this.showHero = true;
-    this.hero.forEach(element => {
-      this.heroName = element.name
-      this.heroDescription = element.description
-      this.heroImg = element.thumbnail.path + '.' + element.thumbnail.extension
+    this.findHeroService.marvel.forEach(element => {
+      if (element.name === this.selectedHero) {
+        this.heroName = element.name
+        this.heroDescription = element.description
+        this.heroImg = element.thumbnail.path + '.' + element.thumbnail.extension
 
-      for (let i = 0; i < element.series.items.length; i++) {
-        this.heroSeries.push(element.series.items[i].name)
+        for (let i = 0; i < element.series.items.length; i++) {
+          this.heroSeries.push(element.series.items[i].name)
+        }
+
+        for (let i = 0; i < element.stories.items.length; i++) {
+          this.heroStories.push(element.stories.items[i].name)
+        }
       }
-
-      for (let i = 0; i < element.stories.items.length; i++) {
-        this.heroStories.push(element.stories.items[i].name)
-      }
-
     });
   }
 

@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 export class FindHeroService {
 
   marvel: Array<any> = [];
-  selectedHero: Array<any> = [];
+  heroes: Array<string> = [];
+  selectedHero: string = '';
 
   timeStamp = '1662776122';
   apiKey = 'ff72b78ea4adee66118597026a8eecb8';
@@ -20,6 +21,7 @@ export class FindHeroService {
     }).then ((jsonParsed) => {
       for (let item of jsonParsed.data.results) {
         this.marvel.push(item)
+        this.heroes.push(item.name)
       }
     })
   }
