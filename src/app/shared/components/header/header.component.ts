@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   getCharacters() {
     if (this.control.value) {
       this.filterHeroes = this.findHeroService.getAllCharacters(String(this.control.value));
-      this.filterHeroes.subscribe(element => element)
+      this.filterHeroes.subscribe(element => element);
     } else {
       window.alert('Nenhum Herói selecionado!')
     }

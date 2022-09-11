@@ -26,7 +26,7 @@ export class FindHeroService {
       for (let i = 0; i < element.data.results.length; i++) {
         this.heroes.push({ name: element.data.results[i].name, id: element.data.results[i].id, img: element.data.results[i].thumbnail.path, extension: element.data.results[i].thumbnail.extension })
       }
-    }))
+    })),
   };
 
   getHeroDetails(id: number): Observable<any> {
