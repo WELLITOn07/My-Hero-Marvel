@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
 
   control = new FormControl;
+  showMenu: boolean = true;
 
   constructor(private findHeroService: FindHeroService) { }
 
