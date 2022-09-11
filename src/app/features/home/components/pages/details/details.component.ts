@@ -21,6 +21,7 @@ export class DetailsComponent implements OnInit {
     this.router.navigateByUrl('home');
   }
 
+  //--MÉTODO P/ NAVEGAR NAS PAGES
   navegateByUrl(url: string) {
     this.router.navigateByUrl(url);
   }
