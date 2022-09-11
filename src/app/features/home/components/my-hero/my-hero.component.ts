@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero } from 'src/app/shared/models/hero.model';
 import { FindHeroService } from 'src/app/shared/services/find-hero.service';
 
 @Component({
@@ -8,46 +9,15 @@ import { FindHeroService } from 'src/app/shared/services/find-hero.service';
 })
 export class MyHeroComponent implements OnInit {
 
-  constructor(private findHeroService: FindHeroService) { }
+  heroes: Array<Hero> = this.findHeroService.heroes;
 
-  //-- VAR P/ GUARDAR ELEMENTOS DA API --//
-  selectedHero: string = '';
-  heroName: string = '';
-  heroDescription: string = '';
-  heroImg: string = '';
-  heroSeries: Array<string> = [];
-  heroStories: Array<string> = [];
-  showHero: boolean = false;
+  constructor(private findHeroService: FindHeroService) { }
 
   ngOnInit(): void {
   }
 
-  //-- MÉTODO P/ ADICIONAR AS INFORMAÇÕES DO HERÓI ESCOLHIDO --/
-  showDetails() {
-    this.heroName = '';
-    this.heroDescription = '';
-    this.heroImg = '';
-    this.heroSeries = [];
-    this.heroStories = [];
-
-
-    this.selectedHero = this.findHeroService.selectedHero;
-    this.showHero = true;
-    this.findHeroService.marvel.forEach(element => {
-      if (element.name === this.selectedHero) {
-        this.heroName = element.name
-        this.heroDescription = element.description
-        this.heroImg = element.thumbnail.path + '.' + element.thumbnail.extension
-
-        for (let i = 0; i < element.series.items.length; i++) {
-          this.heroSeries.push(element.series.items[i].name)
-        }
-
-        for (let i = 0; i < element.stories.items.length; i++) {
-          this.heroStories.push(element.stories.items[i].name)
-        }
-      }
-    });
-  }
+  heroDetails(heroId: number) {
+    console.log(heroId);
+  };
 
 }//end

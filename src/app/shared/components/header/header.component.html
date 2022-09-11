@@ -6,14 +6,12 @@
       <mat-label class="label">
         Pesquisar Herói
       </mat-label>
-      <input  matInput type="text" [matAutocomplete]="auto" class="input" [formControl]="control">
+      <input  matInput type="text"class="input" [formControl]="control" autocomplete="off">
+      <p id="imgSearch">
+        <img (click)="getCharacters()" src="https://img.icons8.com/windows/64/000000/searchengin.png"/>
+      </p>
       <div *ngIf="control.value">
-        <img id="clear" src="https://img.icons8.com/material-rounded/48/000000/clear-symbol--v1.png" (click)="clear()"/>
+        <img id="clear" src="https://img.icons8.com/material-rounded/48/000000/clear-symbol--v1.png"(click)="clear()"/>
       </div>
-      <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
-        <mat-option *ngFor="let heroe of filHeroes | async" [value]="heroe" class="option" (click)="selected(heroe)">
-          {{ heroe }}
-        </mat-option>
-      </mat-autocomplete>
     </mat-form-field>
 </header>

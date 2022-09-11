@@ -1,27 +1,11 @@
 <app-header></app-header>
 
 <main class="main">
-  <section class="
-  heroDetails">
-  <p class="img">
-    <img (click)="showDetails()" src="https://img.icons8.com/windows/64/000000/searchengin.png"/>
-  </p>
-  </section>
-  <h1>{{ heroName }}</h1>
-  <section *ngIf="showHero" class="heroNemAndImg">
-    <p><img src="{{ heroImg }}" alt="heroImg" textInfos></p>
-  </section>
-  <section *ngIf="showHero" class="heroSeriesAnd">
-    <h2 *ngIf="showHero">Sobre</h2>
-    <p class="textInfos">{{ heroDescription }}</p>
-    <h2 *ngIf="showHero">SERIES</h2>
-    <div *ngFor="let item of heroSeries" class="textInfos">
-      {{ item }}
-    </div>
-    <h2 *ngIf="showHero">HISTÓRIAS</h2>
-    <div *ngFor="let item of heroStories" class="textInfos">
-      {{ item }}
-    </div>
+  <section *ngFor="let heroe of heroes">
+  <div class="heroDetails">
+    <h2>{{ heroe.name }}</h2>
+    <img src="{{ heroe.img + '.' + heroe.extension }}" alt="{{ heroe.name + '.' + heroe.extension }}" (click)="heroDetails(heroe.id)">
+  </div>
   </section>
 </main>
 

@@ -82,11 +82,26 @@
   cursor: pointer;
   opacity: 80%;
 }
-.option:hover {
-  background-color: #9FB8BF;
+
+#imgSearch img {
+  position: absolute;
+  width: 70px;
+  margin-top: -50px;
+  margin-left: 220px;
 }
+
+#imgSearch img:hover {
+  cursor: pointer;
+  opacity: 80%;
+  transform: rotate(20deg);
+}
+
 @media (max-width: 600px) {
-  .header > h1 {
+  .header h1 {
     font-size: 3em;
+  }
+  #imgSearch img {
+    width: 50px;
+    margin-left: 190px;
   }
 }
