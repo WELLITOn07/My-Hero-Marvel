@@ -59,7 +59,7 @@
   color: #4B6B78;
   background-color: #181D22;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Marvel', sans-serif;
 }
 
@@ -94,9 +94,11 @@
   transform: rotate(5deg);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .infos h2 {
     font-size: 25px;
-    line-height: 15px;
+  }
+  .name {
+    font-size: 35px;
   }
 }
