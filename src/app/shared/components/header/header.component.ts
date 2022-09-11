@@ -10,7 +10,6 @@ import { FindHeroService } from '../../services/find-hero.service';
 export class HeaderComponent implements OnInit {
 
   control = new FormControl;
-  allHeroes: Array<any>= []
 
   constructor(private findHeroService: FindHeroService) { }
 

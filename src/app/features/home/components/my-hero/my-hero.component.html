@@ -2,10 +2,11 @@
 
 <main class="main">
   <section *ngFor="let heroe of heroes">
-  <div class="heroDetails">
-    <h2>{{ heroe.name }}</h2>
-    <img src="{{ heroe.img + '.' + heroe.extension }}" alt="{{ heroe.name + '.' + heroe.extension }}" (click)="heroDetails(heroe.id)">
-  </div>
+    <div class="heroDetails">
+      <h2>{{ heroe.name }}</h2>
+      <img src="{{ heroe.img + '.' + heroe.extension }}" alt="{{ heroe.name + '.' + heroe.extension }}"
+        (click)="heroDetails(heroe.id)">
+    </div>
   </section>
 </main>
 

@@ -25,32 +25,73 @@
 .main {
   width: 100%;
   height: 100%;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
   background-image: url(../../my-hero/images/4799158.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.main>h1 {
-  font-size: 3em;
-  text-transform: uppercase;
-  color: #6B0C1C;
-  background-color: #181D22;
-  font-family: 'Marvel', sans-serif;
-  padding: 10px;
-  text-align: center;
+.sectionInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
-.main p {
-  color: #EDF6F5;
+.name {
+  padding: 20px;
+  text-align: center;
+  color: #4B6B78;
+  background-color: #181D22;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-family: 'Marvel', sans-serif;
+}
+
+
+.infos {
+  background-color: #9FB8BF;
+}
+
+.infos h2 {
+  padding: 10px;
+  text-align: center;
+  color: #4B6B78;
+  background-color: #181D22;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: 'Marvel', sans-serif;
+}
+
+.infos p {
+  text-align: center;
+  text-align: justify;
+  text-indent: 20px;
+  padding: 20px;
+  color: #181D22;
+  font-size: large;
   font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width: 600px) {
-  .heroNemAndImg p>img {
-    width: 350px;
-  }
+#imgHero {
+  margin: 50px;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 60px;
+  border-radius: 10px 10px 10px 10px;
+  border: 2px solid #374047;
 }
+
+#return {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+#return:hover {
+  cursor: pointer;
+  opacity: 80%;
+  transform: rotate(5deg);
+}
+
+@media (max-width: 600px) {}

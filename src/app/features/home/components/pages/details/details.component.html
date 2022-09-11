@@ -1,5 +1,18 @@
-<app-header></app-header>
 <main class="main">
-  
+  <img (click)="return()" id="return" src="https://img.icons8.com/ios-filled/50/000000/left2.png" />
+  <section *ngFor="let heroe of heroeDetail">
+    <h2 class="name">{{ heroe.name }}</h2>
+    <div class="sectionInfo">
+      <img id="imgHero" src="{{ heroe.img + '.' + heroe.extension }}" alt="{{ heroe.name + '.' + heroe.extension }}">
+    </div>
+    <div class="infos">
+      <h2>SOBRE</h2>
+      <p class="description">{{ heroe.description }}</p>
+      <h2>Séries</h2>
+      <p class="description">{{ heroe.series }}</p>
+      <h2>Histórias</h2>
+      <p class="description">{{ heroe.stories }}</p>
+    </div>
+  </section>
 </main>
 <app-footer></app-footer>
