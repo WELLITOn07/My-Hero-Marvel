@@ -64,6 +64,9 @@
 }
 .heroDetails img:hover {
   cursor: pointer;
+  transition: 0.5s;
+  transform: perspective(15cm) rotateX(-2deg) rotateY(5deg);
+  box-shadow: 0px 0px 10px #6B0C1C;
 }
 
 @media (max-width: 600px) {
