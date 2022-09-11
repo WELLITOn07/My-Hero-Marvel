@@ -54,7 +54,7 @@
 }
 
 .infos h2 {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   color: #4B6B78;
   background-color: #181D22;
@@ -94,4 +94,9 @@
   transform: rotate(5deg);
 }
 
-@media (max-width: 600px) {}
+@media (max-width: 600px) {
+  .infos h2 {
+    font-size: 30px;
+    line-height: 10px;
+  }
+}
