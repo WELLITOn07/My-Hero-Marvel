@@ -21,10 +21,11 @@ export class HeaderComponent implements OnInit {
   }
 
   //-- BUSCANDO TODOS OS OBJETOS DA API COM O MESMO FILTRO DO INPUT (NOME DO HERÓI)
+  heroInput: string = '';
   getCharacters() {
     if (this.control.value) {
-      this.trim(this.control.value)
-      this.filterHeroes = this.findHeroService.getAllCharacters(String(this.control.value));
+      this.trim()
+      this.filterHeroes = this.findHeroService.getAllCharacters(String(this.heroInput));
       this.filterHeroes.subscribe(element => element);
     } else {
       window.alert('Nenhum Herói selecionado!')
@@ -32,8 +33,8 @@ export class HeaderComponent implements OnInit {
   };
 
   //-- FUNÇÃO P/ REMOVER ESPAÇOS NA STRING
-  trim(text: string) {
-    return text.trim();
+  trim() {
+    return this.heroInput = this.control.value.replace(/\s/g, '');
   };
 
   //-- FUNÇÃO P/ RESETAR INPUT
