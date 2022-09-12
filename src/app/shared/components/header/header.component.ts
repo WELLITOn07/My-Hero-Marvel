@@ -11,13 +11,13 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
 
   control = new FormControl;
-  showMenu: boolean = true;
 
   constructor(private findHeroService: FindHeroService) { }
 
   filterHeroes?: Observable<any>;
 
   ngOnInit(): void {
+
   }
 
   //-- BUSCANDO TODOS OS OBJETOS DA API COM O MESMO FILTRO DO INPUT (NOME DO HERÓI)

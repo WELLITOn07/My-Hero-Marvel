@@ -8,6 +8,8 @@ import { Information } from '../models/information.model';
   providedIn: 'root'
 })
 export class FindHeroService {
+  //--VÁRIAVEL USADA P/ ESCONDER HEADER P/ MOBILE
+  showHeader: boolean = true;
   //--VÁRIAVEL P/ TODOS OS HERÓIS FILTRADOS
   heroes: Array<Hero> = [];
   //--VÁRIAVEL P/ O HERÓI SELECIONADO (VER OS DETALHES)
