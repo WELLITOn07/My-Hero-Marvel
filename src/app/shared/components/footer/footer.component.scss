@@ -46,3 +46,8 @@
 .showHeaderIcon > img {
   width: 50px;
 }
+@media (max-width: 600px) {
+  .footer #showMenu {
+    padding-left: 250px;
+  }
+};
