@@ -14,5 +14,8 @@
       <p class="description">{{ heroe.stories }}</p>
     </div>
   </section>
+  <div *ngIf="findHeroService.loading" class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
 </main>
 <app-footer></app-footer>

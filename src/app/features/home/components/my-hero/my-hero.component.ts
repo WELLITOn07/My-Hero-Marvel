@@ -13,7 +13,7 @@ export class MyHeroComponent implements OnInit {
 
   heroes: Array<Hero> = this.findHeroService.heroes;
 
-  constructor(private findHeroService: FindHeroService, private router: Router) { }
+  constructor(public findHeroService: FindHeroService, private router: Router) { }
 
   details?: Observable<any>;
 
@@ -26,5 +26,7 @@ export class MyHeroComponent implements OnInit {
     this.details.subscribe(element => element);
     this.router.navigateByUrl('details');
   };
+
+  //FUNÇÃO P/ FUNCIONAR O SPINNER
 
 }//end

@@ -48,7 +48,6 @@
   font-family: 'Marvel', sans-serif;
 }
 
-
 .infos {
   background-color: #9FB8BF;
 }
@@ -92,6 +91,11 @@
   cursor: pointer;
   opacity: 80%;
   transform: rotate(5deg);
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 500px) {

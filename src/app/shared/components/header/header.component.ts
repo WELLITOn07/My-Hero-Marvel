@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { FindHeroService } from '../../services/find-hero.service';
-import { Observable } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   filterHeroes?: Observable<any>;
 
   ngOnInit(): void {
-
   }
 
   //-- BUSCANDO TODOS OS OBJETOS DA API COM O MESMO FILTRO DO INPUT (NOME DO HERÓI)

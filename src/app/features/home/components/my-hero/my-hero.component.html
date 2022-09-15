@@ -1,13 +1,15 @@
 <app-header></app-header>
 
 <main class="main">
-  <section *ngFor="let heroe of heroes">
-    <div class="heroDetails">
-      <h2>{{ heroe.name }}</h2>
-      <img src="{{ heroe.img + '.' + heroe.extension }}" alt="{{ heroe.name + '.' + heroe.extension }}"
-        (click)="heroDetails(heroe.id)">
-    </div>
-  </section>
+      <section *ngFor="let heroe of heroes">
+        <div class="heroDetails">
+          <h2>{{ heroe.name }}</h2>
+          <img src="{{ heroe.img + '.' + heroe.extension }}" alt="{{ heroe.name + '.' + heroe.extension }}"
+            (click)="heroDetails(heroe.id)">
+        </div>
+      </section>
+      <div *ngIf="findHeroService.loading">
+        <mat-spinner></mat-spinner>
+      </div>
 </main>
-
 <app-footer></app-footer>

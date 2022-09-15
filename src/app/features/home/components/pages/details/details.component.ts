@@ -10,7 +10,7 @@ import { FindHeroService } from 'src/app/shared/services/find-hero.service';
 export class DetailsComponent implements OnInit {
 
 
-  constructor(private router: Router, private findHeroService: FindHeroService) { }
+  constructor(private router: Router, public findHeroService: FindHeroService) { }
 
   heroeDetail: Array<Information> = this.findHeroService.heroeDetail;
 

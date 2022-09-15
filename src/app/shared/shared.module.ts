@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatAutocompleteModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports: [
     HeaderComponent,
