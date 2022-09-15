@@ -1,3 +1,6 @@
 <footer class="footer">
   <p><a href="https://github.com/WELLITOn07" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/github.png"/></a></p>
+    <p *ngIf="!findHeroService.showHeader" class="showHeaderIcon">
+      <img  (click)="showMenu()" id="showMenu"src="https://img.icons8.com/stickers/100/000000/search.png"/>
+    </p>
 </footer>

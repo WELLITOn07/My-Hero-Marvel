@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FindHeroService } from '../../services/find-hero.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public findHeroService: FindHeroService) { }
 
   ngOnInit(): void {
   }
 
-}
+  showMenu() {
+    this.findHeroService.showHeader = true
+  };
+
+};//end

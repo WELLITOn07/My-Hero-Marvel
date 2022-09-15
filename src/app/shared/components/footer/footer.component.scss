@@ -35,3 +35,14 @@
 .footer p  a > img:hover {
   opacity: 80%;
 }
+
+.footer #showMenu {
+  padding-left: 500px;
+}
+.footer #showMenu:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+.showHeaderIcon > img {
+  width: 50px;
+}

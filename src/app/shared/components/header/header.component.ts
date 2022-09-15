@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   control = new FormControl;
 
-  constructor(private findHeroService: FindHeroService) { }
+  constructor(public findHeroService: FindHeroService) { }
 
   filterHeroes?: Observable<any>;
 

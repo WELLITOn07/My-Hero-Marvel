@@ -21,6 +21,10 @@
   --color-09: #D92639;
 }
 
+//--BODY--//
+*::-webkit-scrollbar {
+  display: none;
+}
 //--MAIN--//
 .main {
   width: auto;
@@ -28,6 +32,7 @@
   margin: auto;
   gap: 20px;
   padding: 20px;
+  margin-top: -12px;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -62,12 +67,14 @@
   border-radius: 0px 0px 10px 10px;
   border: 2px solid #374047;
 }
+
 .heroDetails img:hover {
   cursor: pointer;
   transition: 0.5s;
   transform: perspective(15cm) rotateX(-2deg) rotateY(5deg);
   box-shadow: 0px 0px 10px #6B0C1C;
 }
+
 @media (max-width: 600px) {
   .heroDetails img {
     width: 250px;

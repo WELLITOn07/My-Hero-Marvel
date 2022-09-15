@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, finalize, map, Observable } from 'rxjs';
+import { finalize, map, Observable } from 'rxjs';
 import { Hero } from '../models/hero.model';
 import { Information } from '../models/information.model';
 
@@ -10,7 +10,7 @@ import { Information } from '../models/information.model';
 export class FindHeroService {
   //--P/ FUNCIONAR SPINNER (loading da api)
   loading: boolean = false;
-  //--VÁRIAVEL USADA P/ ESCONDER HEADER P/ MOBILE
+  //--VÁRIAVEL USADA P/ MOSTRAR HEADER
   showHeader: boolean = true;
   //--VÁRIAVEL P/ TODOS OS HERÓIS FILTRADOS
   heroes: Array<Hero> = [];
@@ -44,5 +44,14 @@ export class FindHeroService {
       }
     }), finalize(() => this.loading = false ))
   };
+
+  hiddenMenu () {
+    const main = document.querySelector('.main');
+    if (main?.scrollTop) {
+      this.showHeader = false;
+    } else {
+      this.showHeader = true;
+    }
+  }
 
 }//end

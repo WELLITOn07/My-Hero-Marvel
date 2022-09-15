@@ -27,6 +27,4 @@ export class MyHeroComponent implements OnInit {
     this.router.navigateByUrl('details');
   };
 
-  //FUNÇÃO P/ FUNCIONAR O SPINNER
-
 }//end
