@@ -24,6 +24,7 @@ export class MyHeroComponent implements OnInit {
   heroDetails(heroId: number) {
     this.details = this.findHeroService.getHeroDetails(heroId);
     this.details.subscribe(element => element);
+    this.findHeroService.showHeader = true;
     this.router.navigateByUrl('details');
   };
 
