@@ -39,10 +39,10 @@ export class FindHeroService {
     this.heroeDetail.length = 0;
     return this.http.get<any>(`https://gateway.marvel.com:443/v1/public/characters/${id}?ts=${this.timeStamp}&apikey=${this.apiKey}&hash=${this.md5}`).pipe(map((element: any) => {
       //--JOGANDO OS VALORES NA ARRAY
-      for (let i = 0; i < element.data.results.length; i++) {
-        this.heroeDetail.push({ name: element.data.results[i].name, description: element.data.results[i].description, img: element.data.results[i].thumbnail.path, extension: element.data.results[i].thumbnail.extension, series: element.data.results[i].series.items[i].name, stories: element.data.results[i].stories.items[i].name })
-      }
-    }), finalize(() => this.loading = false ))
+        for (let i = 0; i < element.data.results.length; i++) {
+          this.heroeDetail.push({ name: element.data.results[i].name, description: element.data.results[i].description, img: element.data.results[i].thumbnail.path, extension: element.data.results[i].thumbnail.extension, series: element.data.results[i].series.items[i].name, stories: element.data.results[i].stories.items[i].name })
+        }
+    }),finalize(() => this.loading = false))
   };
 
   hiddenMenu () {
@@ -52,6 +52,6 @@ export class FindHeroService {
     } else {
       this.showHeader = true;
     }
-  }
+  };
 
 }//end

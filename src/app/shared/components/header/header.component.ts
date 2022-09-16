@@ -25,7 +25,16 @@ export class HeaderComponent implements OnInit {
     if (this.control.value) {
       this.trim()
       this.filterHeroes = this.findHeroService.getAllCharacters(String(this.heroInput));
-      this.filterHeroes.subscribe(element => element);
+      this.filterHeroes.subscribe({
+        next(el){
+          return el
+        },
+        complete(){
+        },
+        error(msg) {
+          console.log(`Erro: ${msg}`);
+        }
+      });
     } else {
       window.alert('Nenhum Herói selecionado!')
     }
@@ -40,4 +49,6 @@ export class HeaderComponent implements OnInit {
   clear() {
     this.control.reset();
   };
-}
+
+};//end
+

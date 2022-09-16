@@ -23,7 +23,16 @@ export class MyHeroComponent implements OnInit {
   //--PASSANDO E BUSCANDO (NA API) O ID DO HERÓI SELECIONADO
   heroDetails(heroId: number) {
     this.details = this.findHeroService.getHeroDetails(heroId);
-    this.details.subscribe(element => element);
+    this.details.subscribe({
+      next(el){
+        return el
+      },
+      complete(){
+      },
+      error(msg) {
+        console.log(`Erro: ${msg}`);
+      }
+    });
     this.findHeroService.showHeader = true;
     this.router.navigateByUrl('details');
   };
