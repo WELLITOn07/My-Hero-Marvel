@@ -14,7 +14,7 @@ export class FooterComponent implements OnInit {
   }
 
   showMenu() {
-    this.findHeroService.showHeader = true
+    this.findHeroService.showHeader = true;
   };
 
 };//end
