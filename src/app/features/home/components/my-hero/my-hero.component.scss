@@ -24,9 +24,12 @@
 //--MAIN--//
 .main {
   width: 100%;
-  height: max-content;
+  position: fixed;
+  height: 500px;
+  overflow-y: scroll;
   display: flex;
   gap: 15px;
+  margin-top: -15px;
   flex-wrap: wrap;
   justify-content: center;
   background: #181D22;
@@ -36,7 +39,7 @@
   background-attachment: fixed;
 }
 .heroDetails {
-  margin: 10px 0px 20px 0px;
+  margin: 20px 0px 20px 0px;
 };
 .heroDetails h2 {
   margin-bottom: -12px;
