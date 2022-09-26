@@ -21,22 +21,12 @@
   --color-09: #D92639;
 }
 
-//--BODY--//
-*::-webkit-scrollbar {
-  display: none;
-}
 //--MAIN--//
 .main {
   width: 100%;
-  position: fixed;
-  height: 700px;
-  margin: auto;
-  gap: 20px;
-  padding: 20px;
-  margin-top: -12px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: max-content;
   display: flex;
+  gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
   background: #181D22;
@@ -45,10 +35,9 @@
   background-size: cover;
   background-attachment: fixed;
 }
-.main::-webkit-scrollbar {
-  display: none;
-}
-
+.heroDetails {
+  margin: 10px 0px 20px 0px;
+};
 .heroDetails h2 {
   margin-bottom: -12px;
   border-radius: 10px 10px 0px 0px;
@@ -67,6 +56,7 @@
   margin-bottom: 60px;
   border-radius: 0px 0px 10px 10px;
   border: 2px solid #374047;
+  margin-top: 10px;
 }
 
 .heroDetails img:hover {
