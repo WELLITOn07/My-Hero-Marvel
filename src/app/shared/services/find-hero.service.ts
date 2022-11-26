@@ -28,6 +28,7 @@ export class FindHeroService {
     this.heroes.length = 0;
     return this.http.get<any>(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${hero}&ts=${this.timeStamp}&apikey=${this.apiKey}&hash=${this.md5}`).pipe(map((element: any) => {
       //--JOGANDO OS VALORES NA ARRAY
+      console.log(element);
       for (let i = 0; i < element.data.results.length; i++) {
         this.heroes.push({ name: element.data.results[i].name, id: element.data.results[i].id, img: element.data.results[i].thumbnail.path, extension: element.data.results[i].thumbnail.extension })
       }
